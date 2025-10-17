@@ -12,6 +12,11 @@
         nom = TxtNom.Text
         prenom = TxtPrenom.Text
         note = CDbl(TxtNote.Text)
+        If Existe(nom) Then
+            MessageBox.show(" ce Etudiant Existe déjà ")
+            Return
+
+        End If
         If nom = "" Then
             MessageBox.Show("veuillez indiquel le nom ")
             Return
@@ -25,10 +30,11 @@
             Return
 
         End If
-        Ajouter(etudiant)
         etudiant.Nom = nom
-        etudiant.prenom = prenom
-        etudiant.note = note
+        etudiant.Prenom = prenom
+        etudiant.Note = note
+        Ajouter(etudiant)
+
 
 
 
