@@ -18,13 +18,13 @@
         End If
 
     End Sub
-    Private Function existe(A As article)
-        Dim p As Integer = -1
-        For i As Integer = 0 To listeArticles.Count
-            If listeArticles(i).code + A.code Then
-                p = i
+    Private Function existe(A As Article) As Integer
+        For i As Integer = 0 To listeArticles.Count - 1
+            If listeArticles(i).code = A.code Then
+                Return i
             End If
         Next
-        Return p
+        Return -1
     End Function
+
 End Module

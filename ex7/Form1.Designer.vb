@@ -33,7 +33,7 @@ Partial Class Form1
         TxtDes = New TextBox()
         TxtQt = New TextBox()
         BtnAjou = New Button()
-        Button2 = New Button()
+        BtnAnn = New Button()
         SuspendLayout()
         ' 
         ' LblCode
@@ -115,21 +115,21 @@ Partial Class Form1
         BtnAjou.Text = "Ajouter"
         BtnAjou.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' BtnAnn
         ' 
-        Button2.Location = New Point(543, 213)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(168, 68)
-        Button2.TabIndex = 11
-        Button2.Text = "Annuler"
-        Button2.UseVisualStyleBackColor = True
+        BtnAnn.Location = New Point(543, 213)
+        BtnAnn.Name = "BtnAnn"
+        BtnAnn.Size = New Size(168, 68)
+        BtnAnn.TabIndex = 11
+        BtnAnn.Text = "Annuler"
+        BtnAnn.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Button2)
+        Controls.Add(BtnAnn)
         Controls.Add(BtnAjou)
         Controls.Add(TxtQt)
         Controls.Add(TxtDes)
@@ -155,6 +155,6 @@ Partial Class Form1
     Friend WithEvents TxtDes As TextBox
     Friend WithEvents TxtQt As TextBox
     Friend WithEvents BtnAjou As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnAnn As Button
 
 End Class

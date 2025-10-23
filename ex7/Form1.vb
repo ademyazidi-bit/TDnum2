@@ -13,21 +13,28 @@
             test = False
         End If
         If TxtDes.Text = "" Then
-            MessageBox.Show("Code article erronne !", "Erreur")
+            MessageBox.Show("Désignation manquante !", "Erreur")
             test = False
         Else
             A.designation = TxtDes.Text
-            Return
+        End If
+        If Double.TryParse(TxtPrix.Text, prix) AndAlso prix > 0 Then
+            A.prix = prix
+        Else
+            MessageBox.Show("Prix invalide !")
+            test = False
         End If
         If Integer.TryParse(TxtQt.Text, quantite) And quantite > 0 Then
             A.quantite = quantite
             A.code = code
         Else
-            MessageBox.Show("Code article erronne !", "Erreur")
+            MessageBox.Show("Quantité invalide !", "Erreur")
             test = False
         End If
-        If test = True Then ajouteArticle(A)
-        MessageBox.Show(" ajouter avec succces")
+        If test = True Then
+            ajouteArticle(A)
+            MessageBox.Show(" ajouter avec succces")
+        End If
 
     End Sub
 
@@ -35,5 +42,11 @@
 
     End Sub
 
+    Private Sub BtnAnn_Click(sender As Object, e As EventArgs) Handles BtnAnn.Click
+        TxtCode.Text = ""
+        TxtDes.Text = ""
+        TxtPrix.Text = ""
+        TxtQt.Text = ""
 
+    End Sub
 End Class
