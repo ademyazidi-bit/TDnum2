@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -37,8 +38,10 @@ Partial Class Form1
         NumAge = New NumericUpDown()
         Label4 = New Label()
         lblDate = New Label()
+        ErrorProvider = New ErrorProvider(components)
         CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
         CType(NumAge, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ErrorProvider, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -149,11 +152,11 @@ Partial Class Form1
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 20F)
-        Label4.Location = New Point(134, 19)
+        Label4.Location = New Point(134, 22)
         Label4.Name = "Label4"
-        Label4.Size = New Size(433, 46)
+        Label4.Size = New Size(436, 46)
         Label4.TabIndex = 11
-        Label4.Text = "Ajouter un Nouveay patient"
+        Label4.Text = "Ajouter un Nouveau patient"
         ' 
         ' lblDate
         ' 
@@ -162,6 +165,10 @@ Partial Class Form1
         lblDate.Name = "lblDate"
         lblDate.Size = New Size(0, 20)
         lblDate.TabIndex = 12
+        ' 
+        ' ErrorProvider
+        ' 
+        ErrorProvider.ContainerControl = Me
         ' 
         ' Form1
         ' 
@@ -184,6 +191,7 @@ Partial Class Form1
         Text = "Form1"
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         CType(NumAge, ComponentModel.ISupportInitialize).EndInit()
+        CType(ErrorProvider, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -203,5 +211,6 @@ Partial Class Form1
     Friend WithEvents NumAge As NumericUpDown
     Friend WithEvents Label4 As Label
     Friend WithEvents lblDate As Label
+    Friend WithEvents ErrorProvider As ErrorProvider
 
 End Class

@@ -5,10 +5,12 @@
         Dim prenom As String
         Dim age As Integer
     End Structure
-    Public listePatients As List(Of Patient)
-    Public Function AjouterPAtient(p)
-        p.code = listePatients.Count
+    Public listePatients As New List(Of Patient)
+    Public Sub AjouterPAtient(p As Patient)
+        If listePatients Is Nothing Then
+            listePatients = New List(Of Patient)
+        End If
+        listePatients.Add(p)
+    End Sub
 
-
-    End Function
 End Module
