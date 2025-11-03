@@ -25,7 +25,8 @@ Public Class Form1
         If Not (0 <= note <= 100) Then
             ErrorProvider1.SetError(TxtNote, "veillez indiquer le note .")
             Return
-            age = CInt(NumAge.Text)
+        End If
+        age = CInt(NumAge.Text)
             P.nom = TxtNom.Text
             P.prenom = TxtPrenom.Text
             P.age = NumAge.Text

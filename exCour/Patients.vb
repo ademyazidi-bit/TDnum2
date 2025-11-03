@@ -5,7 +5,7 @@
         Dim prenom As String
         Dim age As Integer
     End Structure
-    Public listePatients As New List(Of Patient)
+    Public listePatients As List(Of Patient)
     Public Sub AjouterPAtient(p As Patient)
         If listePatients Is Nothing Then
             listePatients = New List(Of Patient)
