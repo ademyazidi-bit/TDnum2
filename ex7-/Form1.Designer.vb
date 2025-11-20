@@ -33,13 +33,15 @@ Partial Class Form1
         Label3 = New Label()
         Label4 = New Label()
         DataGridView = New DataGridView()
-        BtnAff = New Button()
         Code = New DataGridViewTextBoxColumn()
         Designation = New DataGridViewTextBoxColumn()
         Prix = New DataGridViewTextBoxColumn()
         Quantite = New DataGridViewTextBoxColumn()
         Somme = New DataGridViewTextBoxColumn()
         Total = New DataGridViewTextBoxColumn()
+        BtnAff = New Button()
+        BtnMax = New Button()
+        BtnMin = New Button()
         CType(DataGridView, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -136,15 +138,6 @@ Partial Class Form1
         DataGridView.Size = New Size(796, 373)
         DataGridView.TabIndex = 10
         ' 
-        ' BtnAff
-        ' 
-        BtnAff.Location = New Point(417, 342)
-        BtnAff.Name = "BtnAff"
-        BtnAff.Size = New Size(94, 29)
-        BtnAff.TabIndex = 11
-        BtnAff.Text = "Afficher"
-        BtnAff.UseVisualStyleBackColor = True
-        ' 
         ' Code
         ' 
         Code.HeaderText = "Code"
@@ -187,11 +180,40 @@ Partial Class Form1
         Total.Name = "Total"
         Total.Width = 125
         ' 
+        ' BtnAff
+        ' 
+        BtnAff.Location = New Point(417, 342)
+        BtnAff.Name = "BtnAff"
+        BtnAff.Size = New Size(94, 29)
+        BtnAff.TabIndex = 11
+        BtnAff.Text = "Afficher"
+        BtnAff.UseVisualStyleBackColor = True
+        ' 
+        ' BtnMax
+        ' 
+        BtnMax.Location = New Point(109, 431)
+        BtnMax.Name = "BtnMax"
+        BtnMax.Size = New Size(94, 29)
+        BtnMax.TabIndex = 12
+        BtnMax.Text = "Max"
+        BtnMax.UseVisualStyleBackColor = True
+        ' 
+        ' BtnMin
+        ' 
+        BtnMin.Location = New Point(272, 431)
+        BtnMin.Name = "BtnMin"
+        BtnMin.Size = New Size(94, 29)
+        BtnMin.TabIndex = 13
+        BtnMin.Text = "Min"
+        BtnMin.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1340, 615)
+        Controls.Add(BtnMin)
+        Controls.Add(BtnMax)
         Controls.Add(BtnAff)
         Controls.Add(DataGridView)
         Controls.Add(Label4)
@@ -229,5 +251,7 @@ Partial Class Form1
     Friend WithEvents Quantite As DataGridViewTextBoxColumn
     Friend WithEvents Somme As DataGridViewTextBoxColumn
     Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents BtnMax As Button
+    Friend WithEvents BtnMin As Button
 
 End Class

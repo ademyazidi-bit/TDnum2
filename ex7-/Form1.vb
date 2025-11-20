@@ -69,12 +69,22 @@ Public Class Form1
             Return
         End If
         Dim Total As Double = CalculerTotal()
+
         For i As Integer = 0 To Nxt - 1
             Dim et = TabArticle(i)
 
-
             DataGridView.Rows.Add(et.code, et.designation, et.prix, et.quantite, et.Somme, Total)
         Next
+        Min()
 
+
+    End Sub
+
+    Private Sub BtnMax_Click(sender As Object, e As EventArgs) Handles BtnMax.Click
+        Max()
+    End Sub
+
+    Private Sub BtnMin_Click(sender As Object, e As EventArgs) Handles BtnMin.Click
+        Min()
     End Sub
 End Class

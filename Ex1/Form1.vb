@@ -12,7 +12,7 @@ Public Class Form1
             Return
         End If
 
-        '' A = CInt(InputBox("entrez l'Age : "))
+        A = CInt(InputBox("entrez l'Age : "))
         If Not Integer.TryParse(InputBox("Entrez l'age"), A) Then
             MessageBox.Show("L'âge doit être un nombre !")
             Return

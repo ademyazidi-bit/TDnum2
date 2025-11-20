@@ -36,7 +36,7 @@
                 commande = commande + " " + ctrl.Text
                 If ctrl.Text = "Fromage" Then
                     prix = prix + 2
-                ElseIf ctrl.Text = "Frite" Then
+                ElseIf ctrl.Text = "Frites" Then
                     prix = prix + 2
                 ElseIf ctrl.Text = "Dessert" Then
                     prix = prix + 4
@@ -44,6 +44,9 @@
                 End If
             End If
         Next
+
+        commande = commande & " " & LbBoisson.SelectedItem
+        prix = prix + 10
         LblAff.Text = commande & " ,Total : " & prix
     End Sub
 End Class

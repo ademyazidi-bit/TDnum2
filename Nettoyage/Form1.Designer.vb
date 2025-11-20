@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -46,11 +47,13 @@ Partial Class Form1
         Type_de_Nettoyage = New DataGridViewTextBoxColumn()
         Supplement = New DataGridViewTextBoxColumn()
         Quantite = New DataGridViewTextBoxColumn()
+        ErrorProvider1 = New ErrorProvider(components)
         GroupBoxVet.SuspendLayout()
         GroupBoxNett.SuspendLayout()
         CType(NumericUpDownArticle, ComponentModel.ISupportInitialize).BeginInit()
         GroupBoxSupp.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -282,6 +285,10 @@ Partial Class Form1
         Quantite.Name = "Quantite"
         Quantite.Width = 125
         ' 
+        ' ErrorProvider1
+        ' 
+        ErrorProvider1.ContainerControl = Me
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -308,6 +315,7 @@ Partial Class Form1
         GroupBoxSupp.ResumeLayout(False)
         GroupBoxSupp.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -336,5 +344,6 @@ Partial Class Form1
     Friend WithEvents Type_de_Nettoyage As DataGridViewTextBoxColumn
     Friend WithEvents Supplement As DataGridViewTextBoxColumn
     Friend WithEvents Quantite As DataGridViewTextBoxColumn
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 
 End Class

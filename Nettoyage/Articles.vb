@@ -13,4 +13,11 @@
 
         End Sub
     End Structure
+    Public listeArticles As New List(Of Article)
+
+
+    Public Sub AjouterArticle(A As Article)
+        A.code = A.vetement.Substring(1, 2) & "_" & listeArticles.Count
+        listeArticles.Add(A)
+    End Sub
 End Module
