@@ -11,7 +11,7 @@ Public Class Form1
     End Sub
 
     Private Sub BtnMaj_Click(sender As Object, e As EventArgs) Handles BtnMaj.Click
-        If String.IsNullOrEmpty(Phr) Then
+        If String.IsNullOrWhiteSpace(Phr) Then
             MessageBox.Show("Veillez Entrez Une Phrase Valide ! ")
             Return
         End If

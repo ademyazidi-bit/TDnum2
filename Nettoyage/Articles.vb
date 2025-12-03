@@ -8,7 +8,7 @@
         Public supplement As List(Of Boolean)
 
         Public Sub initArticle()
-            supplement = New List(Of Boolean)({False, False})
+            supplement = New List(Of Boolean) From {False, False}
         End Sub
     End Structure
 
