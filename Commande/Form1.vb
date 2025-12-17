@@ -23,7 +23,7 @@
         If RbPizza.Checked Then
             commande = "Pizza"
             prix = 10
-
+            x
         ElseIf RbBurger.Checked Then
             commande = "Burger"
             prix = 8
